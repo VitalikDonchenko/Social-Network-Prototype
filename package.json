@@ -1,0 +1,20 @@
+{
+  "name": "Social-Network-Prototype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitalikDonchenko/Social-Network-Prototype.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VitalikDonchenko/Social-Network-Prototype/issues"
+  },
+  "homepage": "https://github.com/VitalikDonchenko/Social-Network-Prototype#readme"
+}
