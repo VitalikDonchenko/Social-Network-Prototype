@@ -1,0 +1,39 @@
+<a href="/">Домой</a><br>
+<a href="/users">Найти друзей</a>
+
+<h2>Данные пользователя {{user.firstName}}</h2>
+
+  <div><b>Фото:</b> <img src="{{user.avatar}}" alt="Аватар в процессе загрузки" width="50" height="50"> </div>
+  <div><b>Id: </b>{{user._id}}</div>
+  <div><b>Имя: </b>{{user.firstName}}</div>
+  <div><b>Фамилия:</b> {{user.lastName}}</div>
+  <div><b>Email:</b> {{user.email}}</div>
+  <div><b>Дата рождения:</b> {{dateOfBirthUser}}</div>
+  <div><b>Дополнительная иформация:</b> {{user.privateInfo}}</div>
+
+<h2>Друзья пользователя {{user.firstName}}</h2>
+
+{{#if findAllFriends}}
+  {{#each findAllFriends}}
+
+    <form class="friendsList" name="{{_id}}">
+      <ul>
+        <li>
+          <div><b>Фото:</b> <img src="{{avatar}}" alt="Аватар в процессе загрузки" width="50" height="50"</div>
+          <div><b>Id: </b>{{_id}}</div>
+          <div><b>Имя: </b>{{firstName}}</div>
+          <div><b>Фамилия:</b> {{lastName}}</div>
+          <div><b>Email:</b> {{email}}</div>
+          <button type="submit">Убрать из друзей</button>
+        </li>
+      </ul>
+    </form>
+
+  {{/each}}
+{{else}}
+
+  <div>У Вас еще нет друзей =(</div>
+  <div>Самое время их найти</div>
+  <a href="/users">Клик сюда</a>
+
+{{/if}}

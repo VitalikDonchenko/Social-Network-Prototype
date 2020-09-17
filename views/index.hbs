@@ -1,0 +1,13 @@
+{{#if user}}
+
+<p>Добро пожаловать, {{user.firstName }}</p>
+<p><a href="/cabinet">Личный кабинет</a></p>
+<p><a href="/users">Поиск друзей</a></p>
+<p><a href="/logout">Выйти</a></p>
+
+{{else}}
+
+<p><a href="/login">Логин</a></p>
+<p><a href="/registration">Регистрация</a></p>
+
+{{/if}}

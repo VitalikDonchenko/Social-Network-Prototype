@@ -1,0 +1,30 @@
+<h2>Регистрация нового пользователя</h2>
+
+<a href="/">Домой</a>
+
+<form id="formRegistration" method="POST" action="/registration">
+  <p>
+    <input name="firstName" type="text" required> - имя*
+  </p>
+  <p>
+    <input name="lastName" type="text" required> - фамилия*
+  </p>
+  <p>
+    <input name="email" type="email" required> - email адрес*
+  </p>
+  <p>
+    <input name="avatar" type="text" value="https://i.pinimg.com/originals/76/6c/f7/766cf770ea8dd3529bd8e0c41d6784be.jpg"> - добавьте фото (ссылку на изображение, или воспользуйтесь значением по умолчанию) 
+  </p>
+  <p>
+    <input name="dateOfBirth" type="date"> - дата рождения
+  </p>
+  <p>
+    <input name="privateInfo" type="text"> - пару слов о себе
+  </p>
+  <p>
+    <input name="password" type="password" required> - пароль*
+  </p>
+  * - поля обязательные для заполнения<br>
+
+  <input type="submit" value="Регистрация">
+</form>

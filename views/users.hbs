@@ -1,0 +1,22 @@
+<a href="/">Домой</a><br>
+<a href="/cabinet">Личный кабинет</a>
+
+<h2>Поиск новых друзей</h2>
+
+{{#if findUsers}}
+  {{#each findUsers}}
+
+    <form class="addUser" name="{{_id}}">
+      <ul>
+        <li class="listUser" name="{{_id}}">
+          <div><img src="{{avatar}}" width="50" height="50"</div><br>
+          {{firstName}} {{lastName}}<br>
+          <button type="submit">Добавить в друзья</button>
+        </li>
+      </ul>
+    </form>
+
+  {{/each}}
+{{else}}
+  <div>К сожалению друзья закончились =(</div>
+{{/if}}
