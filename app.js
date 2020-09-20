@@ -2,7 +2,6 @@ import express from 'express';
 import mongoose from 'mongoose';
 import session from 'express-session';
 import FileStoreGeneral from 'session-file-store';
-import path from 'path';
 
 import indexRouter from './routes/index.js';
 import registrationRouter from './routes/registration.js';
@@ -14,8 +13,8 @@ import cabinetRouter from './routes/cabinet.js';
 const FileStore = FileStoreGeneral(session);
 
 const app = express();
-
-mongoose.connect('mongodb://localhost:27017/Social-Network-Prototype', {
+// localhost || mongo for docker
+mongoose.connect('mongodb://mongo:27017/Social-Network-Prototype', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
@@ -55,4 +54,4 @@ app.use('/login', loginRouter);
 app.use('/users', usersRouter);
 app.use('/cabinet', cabinetRouter);
 
-app.listen(process.env.PORT ?? 3000);
+app.listen(process.env.PORT || 3000);
